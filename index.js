@@ -23,7 +23,7 @@ function writeData() {
 		updateEvent = true;
 		setTimeout(() => {
 			console.log("Writing Data");
-			fs.writeFileSync(path.join(__dirname, "data.json"), JSON.stringify(data));
+			fs.writeFileSync(path.join(__dirname, "data.json"), JSON.stringify(data, "", 2));
 			updateEvent = false;
 		}, 1000);
 	}
