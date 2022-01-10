@@ -96,13 +96,7 @@ app.post("/add/*", async (req, res) => {
 
 	Log(player_name, "/add/*", "Start of add");
 
-	console.log(data.findIndex((item) => item.player_name === player_name));
-
-	if (
-		data.findIndex((item) => {
-			item.player_name === player_name;
-		}) !== -1
-	) {
+	if (data.findIndex((item) => item.player_name === player_name) !== -1) {
 		Log(player_name, "/add/*", "Already exists; overwriting");
 		data = data.filter((item) => item.player_name !== player_name);
 	}
