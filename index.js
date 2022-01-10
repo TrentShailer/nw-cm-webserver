@@ -96,6 +96,8 @@ app.post("/add/*", async (req, res) => {
 
 	Log(player_name, "/add/*", "Start of add");
 
+	console.log(data.findIndex((item) => item.player_name === player_name));
+
 	if (
 		data.findIndex((item) => {
 			item.player_name === player_name;
