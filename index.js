@@ -64,8 +64,6 @@ app.post("/fetch", async (req, res) => {
 	Log(names, "/fetch", "Start of fetch");
 
 	let filteredData = data.filter((item) => names.includes(item.player_name));
-
-	Log(names, "/fetch", "Returning Filtered Data: ");
 	console.log(filteredData);
 
 	return res.json(filteredData);
