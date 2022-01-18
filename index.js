@@ -61,10 +61,9 @@ app.get("/get/*", async (req, res) => {
 app.post("/fetch", async (req, res) => {
 	let names = req.body.names;
 
-	Log(names, "/fetch", "Start of fetch");
+	Log(names, "/fetch", "Started fetch");
 
 	let filteredData = data.filter((item) => names.includes(item.player_name));
-	console.log(filteredData);
 
 	return res.json(filteredData);
 });
